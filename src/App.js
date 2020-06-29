@@ -3,13 +3,23 @@ import Header from './component/header';
 import Headline from './component/headline/';
 import './app.scss';
 
+const tempArr = [{
+  name: 'Bob',
+  age: 33,
+  onlineStatus: true
+}];
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header />
         <section className="main">
-          <Headline header="Posts" description="Click the button to render posts!"/>
+          <Headline
+            header="Some Posts"
+            description="Click the button to render posts!"
+            tempArr={tempArr}
+          />
         </section>
       </div>
     );
